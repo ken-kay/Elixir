@@ -1,7 +1,7 @@
 defmodule Hello do
-  def world do
-    IO.puts("Hello World, How's it going?")
-  end
+  def ups(0), do: 0
+  def ups(num) do
+    IO.puts(num)
+    ups(num-1)
+  end 
 end
-
-Hello.world()
