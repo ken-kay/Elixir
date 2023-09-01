@@ -1,7 +1,12 @@
 defmodule Hello do
-  def ups(0), do: 0
-  def ups(num) do
-    ups(num-1)
-    IO.puts(num)
+  def maths([]), do: nil
+  def maths([head | tail]) do
+    IO.puts(head)
+    maths(tail)
   end
+
+  def maths_list() do
+    ["Paper", "Pen", "Eraser"]
+  end
+
 end
