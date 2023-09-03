@@ -41,4 +41,21 @@ defmodule Hello do
   def concat_fn([], dest), do: dest
   def concat_fn([h | t], dest), do: concat_fn(t, [h | dest])
 
+  #simple guessing game
+  def guess do
+    hints = "Noun, clothing, rack"
+    IO.puts "Hints: #{hints}"
+
+    guess = IO.gets "Guess the word: "
+    guess = String.trim(guess)
+
+    case guess do
+      "shoes" ->
+        IO.puts "Lucky guess..."
+        _wrong ->
+          IO.puts "Guess again..."
+          Hello.guess()
+    end
+  end
+
 end
